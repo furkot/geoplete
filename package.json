@@ -1,0 +1,32 @@
+{
+  "name": "geoplete",
+  "version": "0.0.0",
+  "description": "Autocompletion for places and addresses.",
+  "author": {
+    "name": "Damian Krzeminski",
+    "email": "pirxpilot@furkot.com",
+    "url": "https://pirxpilot.com"
+  },
+  "repository": "furkot/geoplete",
+  "license": "ISC",
+  "keywords": [
+    "geoplete",
+    "autocomplete",
+    "geocode"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "browserify": "~16",
+    "jsdom": "~11",
+    "jsdom-global": "~3",
+    "jshint": "~2",
+    "mocha": "~5"
+  },
+  "scripts": {
+    "test": "make check"
+  },
+  "files": [
+    "index.js",
+    "lib"
+  ]
+}
