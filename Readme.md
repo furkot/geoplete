@@ -18,7 +18,9 @@ $ npm install --save geoplete
 ```js
 var geoplete = require('geoplete');
 
-geoplete('Rainbow');
+geoplete(input, {         // input element to which geoplete attaches
+  bounds: [s, w, n e]     // geographical bounds to bias results
+});
 ```
 
 ## License

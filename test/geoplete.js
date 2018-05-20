@@ -1,7 +1,20 @@
+var assert = require('assert');
+
 var geoplete = require('../');
 
-describe('geoplete node module', function () {
-  it('must have at least one test', function () {
-    geoplete();
+describe('geoplete', function () {
+  before(function () {
+    this.jsdom = require('jsdom-global')();
+  });
+
+  after(function () {
+    this.jsdom();
+  });
+
+  it('attach', function () {
+    var input = document.createElement(input);
+    var ac = geoplete(input);
+
+    assert.ok(ac, 'should create autocomplete object');
   });
 });

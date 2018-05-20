@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Geoplete</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" href="build/build.css">
+    <script src="build/build.js"></script>
+    <style>
+      body {
+        padding: 3em;
+        font-size: 16px;
+      }
+      label,
+      input,
+      textarea {
+        width: 40em;
+        box-sizing: border-box;
+        max-width: 100%;
+        display: block;
+        margin-bottom: .7em;
+        font-size: 1rem;
+        padding: 3px;
+      }
+    </style>
+  </head>
+  <body>
+    <label for='geoplete'>Enter place name:</label>
+    <input id='geoplete' type=text/>
+    <textarea id='result' rows=20></textarea>
+    <script>
+      var el = document.getElementById('geoplete');
+      var result = document.getElementById('result');
+
+      var geoplete = require('geoplete');
+      geoplete(el);
+      el.addEventListener('awesomplete-selectcomplete', function(event) {
+        result.value = JSON.stringify(event.text.value, null, 2);
+      });
+    </script>
+  </body>
+</html>

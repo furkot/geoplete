@@ -9,24 +9,24 @@
   },
   "repository": "furkot/geoplete",
   "license": "ISC",
-  "keywords": [
-    "geoplete",
-    "autocomplete",
-    "geocode"
-  ],
-  "dependencies": {},
+  "keywords": ["geoplete", "autocomplete", "geocode"],
+  "dependencies": {
+    "awesomplete": "~1",
+    "furkot-geocode": "~1"
+  },
   "devDependencies": {
     "browserify": "~16",
+    "envify": "~4",
     "jsdom": "~11",
     "jsdom-global": "~3",
     "jshint": "~2",
     "mocha": "~5"
   },
+  "browserify": {
+    "transform": ["envify"]
+  },
   "scripts": {
     "test": "make check"
   },
-  "files": [
-    "index.js",
-    "lib"
-  ]
+  "files": ["index.js", "lib"]
 }
