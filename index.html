@@ -33,8 +33,8 @@
 
       var geoplete = require('geoplete');
       geoplete(el);
-      el.addEventListener('awesomplete-selectcomplete', function(event) {
-        result.value = JSON.stringify(event.text.value, null, 2);
+      el.addEventListener('geoplete-change', function(event) {
+        result.value = JSON.stringify(event.detail, null, 2);
       });
     </script>
   </body>
