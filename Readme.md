@@ -5,7 +5,7 @@
 
 # geoplete
 
-Autocompletion for places and addresses.
+Autocompletion for places and addresses. Checkout the [demo].
 Uses [awesomplete] for UI, and [furkot-geocode] as a geocoder backend.
 
 ## Install
@@ -53,7 +53,7 @@ ISC © [Damian Krzeminski](https://pirxpilot.com)
 [npm-url]: https://npmjs.org/package/geoplete
 
 [travis-url]: https://travis-ci.com/furkot/geoplete
-[travis-image]: https://img.shields.io/travis.com/furkot/geoplete.svg
+[travis-image]: https://img.shields.io/travis/furkot/geoplete.svg
 
 [deps-image]: https://img.shields.io/david/furkot/geoplete.svg
 [deps-url]: https://david-dm.org/furkot/geoplete
@@ -63,4 +63,5 @@ ISC © [Damian Krzeminski](https://pirxpilot.com)
 
 [awesomplete]: https://npmjs.org/package/awesomplete
 [furkot-geocode]: https://npmjs.org/package/furkot-geocode
+[demo]: https://furkot.github.io/geoplete/
 
