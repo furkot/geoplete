@@ -21,6 +21,7 @@ var geoplete = require('geoplete');
 var input = document.querySelection('.input-field');
 
 geoplete(input, {         // input element to which geoplete attaches
+  type: 'address',        // 'address' or 'place'
   minChars: 4,            // min number of characters before we query for matches
   lang: 'en',             // language - if not specified document.lang is used
   bounds: [[W,S],[E,N]],  // location hint - array of 2 [longitude, latitude] points

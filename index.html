@@ -7,6 +7,7 @@
     <script src="build/build.js"></script>
     <style>
       body {
+        box-sizing: border-box;
         padding: 3em;
         font-size: 16px;
       }
@@ -14,12 +15,11 @@
       input,
       textarea {
         width: 40em;
-        box-sizing: border-box;
         max-width: 100%;
         display: block;
         margin-bottom: .7em;
         font-size: 1rem;
-        padding: 3px;
+        padding: 4px;
       }
       input {
         transition: background-color 0.5s ease;
@@ -27,24 +27,35 @@
       input.geoplete-in-progress {
         background-color: #7FDBFF;
       }
+      .awesomplete:hover {
+        background-color: white;
+      }
 div:hover {
   background-color: green;
 }
     </style>
   </head>
   <body>
-    <label for='geoplete'>Enter place name:</label>
-    <input id='geoplete' type=text/>
+    <label for='place'>Enter place name:</label>
+    <input id='place' type=text/>
+    <label for='address'>Enter adress:</label>
+    <input id='address' type=text/>
     <textarea id='result' rows=20></textarea>
     <script>
-      var el = document.getElementById('geoplete');
-      var result = document.getElementById('result');
-
       var geoplete = require('geoplete');
-      geoplete(el);
-      el.addEventListener('geoplete-change', function(event) {
+
+      var result = document.getElementById('result');
+      function onchange(event) {
         result.value = JSON.stringify(event.detail, null, 2);
-      });
+      }
+
+      var place = document.getElementById('place');
+      place.addEventListener('geoplete-change', onchange);
+      geoplete(place, { type: 'place' });
+
+      var address = document.getElementById('address');
+      address.addEventListener('geoplete-change', onchange);
+      geoplete(address, { type: 'address' });
     </script>
   </body>
 </html>
