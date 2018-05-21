@@ -1,4 +1,9 @@
 
+0.1.0 / 2018-05-21
+==================
+
+ * add support for aborting outstanding requests
+
 0.0.3 / 2018-05-20
 ==================
 
