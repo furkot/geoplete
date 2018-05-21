@@ -6,6 +6,7 @@
 # geoplete
 
 Autocompletion for places and addresses.
+Uses [awesomplete] for UI, and [furkot-geocode] as a geocoder backend.
 
 ## Install
 
@@ -17,11 +18,31 @@ $ npm install --save geoplete
 
 ```js
 var geoplete = require('geoplete');
+var input = document.querySelection('.input-field');
 
 geoplete(input, {         // input element to which geoplete attaches
-  bounds: [s, w, n e]     // geographical bounds to bias results
+  minChars: 4,            // min number of characters before we query for matches
+  lang: 'en',             // language - if not specified document.lang is used
+  bounds: [[W,S],[E,N]],  // location hint - array of 2 [longitude, latitude] points
+  geocoder: {
+                          // see [furkot-geocode] for details
+  }
 });
 ```
+
+When one of the values is selected `input` will event.
+The `detail` field of the event contain place information:
+
+- `place` - place name (may be absent if address doesn't correspond to a named place)
+- `type` - place type
+- `address` - formated address
+- `house` - building number
+- `street` - street name
+- `community` - neighborhood or village
+- `town` - town or city
+- `county` - administrative area more general than town
+- `province` - state or province (usually abbreviated)
+- `country` - country (short form but not abbreviated)
 
 ## License
 
@@ -30,11 +51,15 @@ ISC © [Damian Krzeminski](https://pirxpilot.com)
 [npm-image]: https://img.shields.io/npm/v/geoplete.svg
 [npm-url]: https://npmjs.org/package/geoplete
 
-[travis-url]: https://travis-ci.org/furkot/geoplete
-[travis-image]: https://img.shields.io/travis/furkot/geoplete.svg
+[travis-url]: https://travis-ci.com/furkot/geoplete
+[travis-image]: https://img.shields.io/travis.com/furkot/geoplete.svg
 
 [deps-image]: https://img.shields.io/david/furkot/geoplete.svg
 [deps-url]: https://david-dm.org/furkot/geoplete
 
 [deps-dev-image]: https://img.shields.io/david/dev/furkot/geoplete.svg
 [deps-dev-url]: https://david-dm.org/furkot/geoplete?type=dev
+
+[awesomplete]: https://npmjs.org/package/awesomplete
+[furkot-geocode]: https://npmjs.org/package/furkot-geocode
+
