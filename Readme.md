@@ -25,6 +25,7 @@ geoplete(input, {         // input element to which geoplete attaches
   minChars: 4,            // min number of characters before we query for matches
   lang: 'en',             // language - if not specified document.lang is used
   bounds: [[W,S],[E,N]],  // location hint - array of 2 [longitude, latitude] points
+  item: function () {},   // generate list item (see [awesomplete][awesomplete-extend])
   geocoder: {
                           // see [furkot-geocode] for details
   }
@@ -62,6 +63,7 @@ ISC © [Damian Krzeminski](https://pirxpilot.com)
 [deps-dev-url]: https://david-dm.org/furkot/geoplete?type=dev
 
 [awesomplete]: https://npmjs.org/package/awesomplete
+[awesomplete-extend]: https://leaverou.github.io/awesomplete/#extensibility
 [furkot-geocode]: https://npmjs.org/package/furkot-geocode
 [demo]: https://furkot.github.io/geoplete/
 
