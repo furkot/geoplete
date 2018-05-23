@@ -1,4 +1,16 @@
 
+0.2.0 / 2018-05-23
+==================
+
+ * add option to keep list open
+ * add support for changing options after creation
+ * fix preventing re-query on the same input
+ * handle minimum number of characters outside awesomplete to allow showing list with empty input
+ * dispatch custom event when list is populated
+ * expose function to populate list
+ * expose function to customize generating list items
+ * upgrade furkot geocode 1.2.0 -> 1.2.1
+
 0.1.0 / 2018-05-21
 ==================
 
