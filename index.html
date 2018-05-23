@@ -51,11 +51,19 @@ div:hover {
 
       var place = document.getElementById('place');
       place.addEventListener('geoplete-change', onchange);
-      geoplete(place, { type: 'place' });
+      geoplete(place, { type: 'place', item: item });
 
       var address = document.getElementById('address');
       address.addEventListener('geoplete-change', onchange);
       geoplete(address, { type: 'address' });
+
+      // example of how to customize output
+      function item(text) {
+        var v = text.value;
+        var li = document.createElement('li');
+        li.innerHTML = '<mark>' + v.place + '</mark> <em>' + v.address + '</em>';
+        return li;
+      }
     </script>
   </body>
 </html>
