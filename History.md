@@ -1,4 +1,10 @@
 
+0.2.2 / 2018-05-27
+==================
+
+ * awesomplete -> @melitele/awesomplete 2.0.1
+ * add stats and provider fields to list results
+
 0.2.1 / 2018-05-23
 ==================
 
