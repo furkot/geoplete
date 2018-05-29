@@ -61,7 +61,7 @@ div:hover {
       function item(text) {
         var v = text.value;
         var li = document.createElement('li');
-        li.innerHTML = '<mark>' + v.place + '</mark> <em>' + v.address + '</em>';
+        li.innerHTML = '<mark>' + (v.place || '') + '</mark> <em>' + v.address + '</em>';
         return li;
       }
     </script>
