@@ -1,4 +1,12 @@
 
+0.2.3 / 2018-05-28
+==================
+
+ * fix marking text in the demo when place is not set
+ * fix location of awesomplete.css
+ * @melitele/awesomplete 2.0.1 -> 2.0.2
+ * furkot-geocode 1.2.1 -> 1.3.0
+
 0.2.2 / 2018-05-27
 ==================
 
