@@ -15,7 +15,7 @@
     "geocode"
   ],
   "dependencies": {
-    "@melitele/awesomplete": "^2.0.1",
+    "@melitele/awesomplete": "^2.0.2",
     "debounce": "^1.1.0",
     "furkot-geocode": "^1.3"
   },
