@@ -2,7 +2,7 @@ PROJECT=geoplete
 NODE_BIN=./node_modules/.bin
 SRC = index.js $(wildcard lib/*.js)
 CSS = \
-	./node_modules/awesomplete/awesomplete.css \
+	./node_modules/@melitele/awesomplete/awesomplete.css \
 	${PROJECT}.css
 
 all: check compile
