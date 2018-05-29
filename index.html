@@ -41,29 +41,8 @@ div:hover {
     <label for='address'>Enter adress:</label>
     <input id='address' type=text/>
     <textarea id='result' rows=20></textarea>
-    <script>
-      var geoplete = require('geoplete');
-
-      var result = document.getElementById('result');
-      function onchange(event) {
-        result.value = JSON.stringify(event.detail, null, 2);
-      }
-
-      var place = document.getElementById('place');
-      place.addEventListener('geoplete-change', onchange);
-      geoplete(place, { type: 'place', item: item });
-
-      var address = document.getElementById('address');
-      address.addEventListener('geoplete-change', onchange);
-      geoplete(address, { type: 'address' });
-
-      // example of how to customize output
-      function item(text) {
-        var v = text.value;
-        var li = document.createElement('li');
-        li.innerHTML = '<mark>' + v.place + '</mark> <em>' + v.address + '</em>';
-        return li;
-      }
+    <script type="text/javascript">
+      require('demo');
     </script>
-  </body>
+    </body>
 </html>
