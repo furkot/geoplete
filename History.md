@@ -1,4 +1,14 @@
 
+0.2.4 / 2018-08-19
+==================
+
+ * furkot-geocode 1.3 -> 1.4.8
+ * skip query if enough entries match from the previous one
+ * optional function to process query parameter prior to invoking geocoder
+ * trim value before geocoding
+ * pass 'sort' option to Awesomplete
+ * refactor to calculate suggestions once per query
+
 0.2.3 / 2018-05-28
 ==================
 
