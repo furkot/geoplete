@@ -1,6 +1,6 @@
 {
   "name": "geoplete",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "description": "Autocompletion for places and addresses.",
   "author": {
     "name": "Damian Krzeminski",
