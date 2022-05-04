@@ -17,7 +17,7 @@
   "dependencies": {
     "@melitele/awesomplete": "^2.0.2",
     "debounce": "^1.1.0",
-    "furkot-geocode": "^1.4.10"
+    "furkot-geocode": "^2.0.0"
   },
   "devDependencies": {
     "browserify": "~16",
