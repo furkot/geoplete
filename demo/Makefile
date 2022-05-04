@@ -20,6 +20,7 @@ build/build.css: $(CSS) | build
 build/build.js: node_modules $(SRC) | build
 	$(NODE_BIN)/browserify \
 		--debug \
+		--transform envlocalify \
 		--require ./index.js:$(PROJECT) \
 		--outfile $@
 
