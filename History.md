@@ -1,4 +1,12 @@
 
+1.0.0 / 2022-05-06
+==================
+
+ * replace geocoder used for the demo
+ * move demo to a subfolder
+ * rewrite code in ES6
+ * furkot-geocode 1.4.10 -> 2.0.0
+
 0.2.6 / 2018-08-30
 ==================
 
