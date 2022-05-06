@@ -1,4 +1,6 @@
 {
+  "browser": true,
+  "browserify": true,
   "curly": true,
   "eqeqeq": true,
   "eqnull": true,
@@ -8,7 +10,7 @@
   "mocha" : true,
   "newcap": true,
   "noarg": true,
-  "browserify": true,
+  "node": true,
   "sub": true,
   "undef": true,
   "unused": true

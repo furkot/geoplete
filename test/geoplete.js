@@ -1,6 +1,6 @@
-var assert = require('assert');
+const assert = require('assert');
 
-var geoplete = require('../');
+const geoplete = require('../');
 
 describe('geoplete', function () {
   before(function () {
@@ -20,20 +20,21 @@ describe('geoplete', function () {
   });
 
   it('attach', function () {
-    var input = document.getElementById('test');
-    var ac = this.ac = geoplete(input);
+    const input = document.getElementById('test');
+    const ac = this.ac = geoplete(input);
 
     assert.ok(ac, 'should create autocomplete object');
   });
 
   it('matching', function (done) {
-    var input = document.getElementById('test'), count = 0;
+    const input = document.getElementById('test');
+    let count = 0;
     this.ac = geoplete(input, {
       type: 'place',
       geocoder: {
         order: ['synchronous'],
         synchronous_parameters: {
-          response: function (query) {
+          response(query) {
             count += 1;
             if (query.place === 'san franc') {
               return [
@@ -52,7 +53,7 @@ describe('geoplete', function () {
             assert.fail();
           }
         },
-        synchronous_enable: function () { return true; }
+        synchronous_enable() { return true; }
       }
     });
     input.value = 'san franc';
