@@ -1,4 +1,10 @@
 
+1.0.2 / 2022-05-12
+==================
+
+ * furkot-geocode 2.0.2
+ * fix substituting geocoder keys in demo
+
 1.0.1 / 2022-05-06
 ==================
 
