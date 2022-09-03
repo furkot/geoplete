@@ -20,11 +20,11 @@
     "furkot-geocode": "^2.0.2"
   },
   "devDependencies": {
-    "browserify": "~16",
-    "jsdom": "~11",
+    "browserify": "~17",
+    "jsdom": "~20",
     "jsdom-global": "~3",
     "jshint": "~2",
-    "mocha": "~5"
+    "mocha": "~10"
   },
   "scripts": {
     "test": "make check"
