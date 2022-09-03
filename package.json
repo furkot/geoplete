@@ -15,9 +15,9 @@
     "geocode"
   ],
   "dependencies": {
+    "@furkot/geocode": "^3.0.0",
     "@melitele/awesomplete": "^2.0.2",
-    "debounce": "^1.1.0",
-    "furkot-geocode": "^2.0.2"
+    "debounce": "^1.1.0"
   },
   "devDependencies": {
     "browserify": "~17",
