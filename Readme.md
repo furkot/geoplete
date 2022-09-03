@@ -1,7 +1,6 @@
 [![NPM version][npm-image]][npm-url]
-[![Build Status][travis-image]][travis-url]
+[![Build Status][build-image]][build-url]
 [![Dependency Status][deps-image]][deps-url]
-[![Dev Dependency Status][deps-dev-image]][deps-dev-url]
 
 # geoplete
 
@@ -50,17 +49,15 @@ The `detail` field of the event contain place information:
 
 ISC © [Damian Krzeminski](https://pirxpilot.com)
 
-[npm-image]: https://img.shields.io/npm/v/geoplete.svg
+[npm-image]: https://img.shields.io/npm/v/geoplete
 [npm-url]: https://npmjs.org/package/geoplete
 
-[travis-url]: https://travis-ci.com/furkot/geoplete
-[travis-image]: https://img.shields.io/travis/furkot/geoplete.svg
+[build-url]: https://github.com/furkot/geoplete/actions/workflows/check.yaml
+[build-image]: https://img.shields.io/github/workflow/status/furkot/geoplete/check
 
-[deps-image]: https://img.shields.io/david/furkot/geoplete.svg
-[deps-url]: https://david-dm.org/furkot/geoplete
+[deps-image]: https://img.shields.io/librariesio/release/npm/geoplete
+[deps-url]: https://libraries.io/npm/geoplete
 
-[deps-dev-image]: https://img.shields.io/david/dev/furkot/geoplete.svg
-[deps-dev-url]: https://david-dm.org/furkot/geoplete?type=dev
 
 [awesomplete]: https://npmjs.org/package/awesomplete
 [awesomplete-extend]: https://leaverou.github.io/awesomplete/#extensibility
