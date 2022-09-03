@@ -2,7 +2,7 @@
   "curly": true,
   "eqeqeq": true,
   "eqnull": true,
-  "esversion": 6,
+  "esversion": 8,
   "immed": true,
   "latedef": "nofunc",
   "mocha" : true,
