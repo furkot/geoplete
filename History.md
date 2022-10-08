@@ -1,4 +1,9 @@
 
+1.1.1 / 2022-10-08
+==================
+
+ * add optional function that triggers query depending on string value not just length
+
 1.1.0 / 2022-09-03
 ==================
 
