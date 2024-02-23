@@ -5,7 +5,6 @@
   "esversion": 8,
   "immed": true,
   "latedef": "nofunc",
-  "mocha" : true,
   "newcap": true,
   "noarg": true,
   "browserify": true,

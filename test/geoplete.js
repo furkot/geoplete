@@ -1,4 +1,5 @@
-const assert = require('assert');
+const { describe, it, before, after, beforeEach, afterEach } = require('node:test');
+const assert = require('node:assert/strict');
 
 const geoplete = require('../');
 
@@ -26,7 +27,7 @@ describe('geoplete', function () {
     assert.ok(ac, 'should create autocomplete object');
   });
 
-  it('matching', function (done) {
+  it('matching', function (_, done) {
     const input = document.getElementById('test');
     let count = 0;
     this.ac = geoplete(input, {
