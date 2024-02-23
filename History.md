@@ -1,4 +1,12 @@
 
+1.1.5 / 2024-02-23
+==================
+
+ * upgrade github actions
+ * relax debounce module requirement
+ * replace mocha with node:test
+ * replace jshint with @pirxpilot/jshint
+
 1.1.4 / 2024-02-22
 ==================
 
