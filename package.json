@@ -20,10 +20,10 @@
     "debounce": "^1.1.0"
   },
   "devDependencies": {
+    "@pirxpilot/jshint": "~3",
     "browserify": "~17",
     "jsdom": "~20",
     "jsdom-global": "~3",
-    "jshint": "~2",
     "mocha": "~10"
   },
   "scripts": {
