@@ -4,12 +4,13 @@ SRC = index.js $(wildcard lib/*.js)
 check: lint test
 
 node_modules: package.json
-	yarn && touch $@
+	yarn
+	touch $@
 
 lint: | node_modules
 	$(NODE_BIN)/jshint $(SRC) test
 
 test: | node_modules
-	$(NODE_BIN)/mocha --reporter spec
+	node --test
 
 .PHONY: lint check test

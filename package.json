@@ -7,7 +7,7 @@
     "email": "pirxpilot@furkot.com",
     "url": "https://pirxpilot.com"
   },
-  "repository": "furkot/geoplete",
+  "repository": "github:furkot/geoplete",
   "license": "ISC",
   "keywords": [
     "geoplete",
@@ -17,14 +17,12 @@
   "dependencies": {
     "@furkot/geocode": "^3.1.2",
     "@melitele/awesomplete": "^2.0.2",
-    "debounce": "^1.1.0"
+    "debounce": "^1.1.0||^2.0.0"
   },
   "devDependencies": {
-    "browserify": "~17",
-    "jsdom": "~20",
-    "jsdom-global": "~3",
-    "jshint": "~2",
-    "mocha": "~10"
+    "@pirxpilot/jshint": "~3",
+    "jsdom": "~24",
+    "jsdom-global": "~3"
   },
   "scripts": {
     "test": "make check"

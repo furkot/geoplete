@@ -53,7 +53,7 @@ ISC © [Damian Krzeminski](https://pirxpilot.com)
 [npm-url]: https://npmjs.org/package/geoplete
 
 [build-url]: https://github.com/furkot/geoplete/actions/workflows/check.yaml
-[build-image]: https://img.shields.io/github/workflow/status/furkot/geoplete/check
+[build-image]: https://img.shields.io/github/actions/workflow/status/furkot/geoplete/check.yaml?branch=main
 
 [deps-image]: https://img.shields.io/librariesio/release/npm/geoplete
 [deps-url]: https://libraries.io/npm/geoplete
