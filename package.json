@@ -7,7 +7,7 @@
     "email": "pirxpilot@furkot.com",
     "url": "https://pirxpilot.com"
   },
-  "repository": "furkot/geoplete",
+  "repository": "github:furkot/geoplete",
   "license": "ISC",
   "keywords": [
     "geoplete",
