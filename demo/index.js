@@ -4,10 +4,10 @@ const keys = {
   geocodio: process.env.GEOCODIO_KEY,
   graphhopper: process.env.GRAPHHOPPER_KEY,
   locationiq: process.env.LOCATIONIQ_KEY,
+  maptiler: process.env.MAPTILER_KEY,
   opencage: process.env.OPENCAGE_KEY,
   pelias: process.env.PELIAS_KEY,
-  positionstack: process.env.POSITIONSTACK_KEY,
-  tilehosting: process.env.TILEHOSTING_KEY
+  positionstack: process.env.POSITIONSTACK_KEY
 };
 
 function geocoder(name) {
@@ -30,7 +30,7 @@ const geocoderAddress = [
 ].find(name => keys[name]);
 
 const geocoderPlace = [
-  'tilehosting',
+  'maptiler',
   'graphhopper',
   'locationiq',
   'opencage',
