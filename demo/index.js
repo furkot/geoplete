@@ -10,13 +10,21 @@ const keys = {
   positionstack: process.env.POSITIONSTACK_KEY
 };
 
+const urls = {
+  pelias: process.env.PELIAS_URL
+};
+
 function geocoder(name) {
-  return {
+  const g = {
     order: [name],
     [`${name}_key`]: keys[name],
     [`${name}_parameters`]: { interval: 1000 },
     [`${name}_enable`]: () => true
   };
+  if (urls[name]) {
+    g[`${name}_url`] = urls[name];
+  }
+  return g;
 }
 
 const geocoderAddress = ['geocodio', 'graphhopper', 'locationiq', 'opencage', 'pelias', 'positionstack'].find(
