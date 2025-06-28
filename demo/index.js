@@ -11,32 +11,21 @@ const keys = {
 };
 
 function geocoder(name) {
-  const g = {
-    order: [name]
+  return {
+    order: [name],
+    [`${name}_key`]: keys[name],
+    [`${name}_parameters`]: { interval: 1000 },
+    [`${name}_enable`]: () => true
   };
-  g[name + '_key'] = keys[name];
-  g[name + '_parameters'] = { interval : 1000 };
-  g[name + '_enable'] = () => true;
-  return g;
 }
 
-const geocoderAddress = [
-  'geocodio',
-  'graphhopper',
-  'locationiq',
-  'opencage',
-  'pelias',
-  'positionstack'
-].find(name => keys[name]);
+const geocoderAddress = ['geocodio', 'graphhopper', 'locationiq', 'opencage', 'pelias', 'positionstack'].find(
+  name => keys[name]
+);
 
-const geocoderPlace = [
-  'maptiler',
-  'graphhopper',
-  'locationiq',
-  'opencage',
-  'pelias',
-  'positionstack'
-].find(name => keys[name]);
+const geocoderPlace = ['maptiler', 'graphhopper', 'locationiq', 'opencage', 'pelias', 'positionstack'].find(
+  name => keys[name]
+);
 
 const result = document.getElementById('result');
 function onchange(event) {
@@ -55,6 +44,6 @@ geoplete(address, { type: 'address', geocoder: geocoder(geocoderAddress) });
 function item(text) {
   const v = text.value;
   const li = document.createElement('li');
-  li.innerHTML = '<mark>' + (v.place || '') + '</mark> <em>' + v.address + '</em>';
+  li.innerHTML = `<mark>${v.place || ''}</mark> <em>${v.address}</em>`;
   return li;
 }
