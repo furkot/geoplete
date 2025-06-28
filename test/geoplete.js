@@ -3,7 +3,7 @@ const assert = require('node:assert/strict');
 
 const geoplete = require('../');
 
-describe('geoplete', function () {
+describe('geoplete', () => {
   before(function () {
     this.jsdom = require('jsdom-global')();
   });
@@ -12,7 +12,7 @@ describe('geoplete', function () {
     this.jsdom();
   });
 
-  beforeEach(function () {
+  beforeEach(() => {
     document.body.innerHTML = '<input id="test" type="text">';
   });
 
@@ -22,7 +22,7 @@ describe('geoplete', function () {
 
   it('attach', function () {
     const input = document.getElementById('test');
-    const ac = this.ac = geoplete(input);
+    const ac = (this.ac = geoplete(input));
 
     assert.ok(ac, 'should create autocomplete object');
   });
@@ -54,25 +54,30 @@ describe('geoplete', function () {
             assert.fail();
           }
         },
-        synchronous_enable() { return true; }
+        synchronous_enable() {
+          return true;
+        }
       }
     });
     input.value = 'san franc';
-    input.dispatchEvent(new Event('input', {
-      'bubbles': true,
-      'cancelable': true
-    }));
-    setTimeout(function () {
+    input.dispatchEvent(
+      new Event('input', {
+        bubbles: true,
+        cancelable: true
+      })
+    );
+    setTimeout(() => {
       input.value = 'san franci';
-      input.dispatchEvent(new Event('input', {
-        'bubbles': true,
-        'cancelable': true
-      }));
-      setTimeout(function () {
+      input.dispatchEvent(
+        new Event('input', {
+          bubbles: true,
+          cancelable: true
+        })
+      );
+      setTimeout(() => {
         assert.equal(count, 1);
         done();
       }, 500);
     }, 500);
   });
 });
-
