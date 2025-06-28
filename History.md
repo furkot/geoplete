@@ -1,4 +1,10 @@
 
+1.1.7 / 2025-06-28
+==================
+
+ * use `esbuild` to create demo
+ * use `biome` as a linter and formatter
+
 1.1.6 / 2025-01-26
 ==================
 
