@@ -1,4 +1,4 @@
-const geoplete = require('..');
+import geoplete from '../lib/geoplete.js';
 
 const keys = {
   geocodio: process.env.GEOCODIO_KEY,

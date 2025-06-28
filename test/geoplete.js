@@ -1,11 +1,11 @@
-const { describe, it, before, after, beforeEach, afterEach } = require('node:test');
-const assert = require('node:assert/strict');
-
-const geoplete = require('../');
+import assert from 'node:assert/strict';
+import { after, afterEach, before, beforeEach, describe, it } from 'node:test';
+import jsdomGlobal from 'jsdom-global';
+import geoplete from '../lib/geoplete.js';
 
 describe('geoplete', () => {
   before(function () {
-    this.jsdom = require('jsdom-global')();
+    this.jsdom = jsdomGlobal();
   });
 
   after(function () {
