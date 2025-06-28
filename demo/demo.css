@@ -1,0 +1,32 @@
+body {
+  box-sizing: border-box;
+  padding: 3em;
+  font-size: 16px;
+}
+
+label,
+input,
+textarea {
+  width: 40em;
+  max-width: 100%;
+  display: block;
+  margin-bottom: 0.7em;
+  font-size: 1rem;
+  padding: 4px;
+}
+
+input {
+  transition: background-color 0.5s ease;
+}
+
+input.geoplete-in-progress {
+  background-color: #7fdbff;
+}
+
+.awesomplete:hover {
+  background-color: white;
+}
+
+div:hover {
+  background-color: green;
+}

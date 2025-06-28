@@ -32,6 +32,11 @@
       "expand": "always"
     }
   },
+  "html": {
+    "formatter": {
+      "enabled": true
+    }
+  },
   "linter": {
     "enabled": true,
     "rules": {

@@ -1,6 +1,6 @@
 {
   "devDependencies": {
-    "browserify": "^17.0.0",
-    "envlocalify": "^1.1.1"
+    "esbuild": "^0.25.5",
+    "@intrnl/esbuild-plugin-env": "^0.1.3"
   }
 }

@@ -5,9 +5,7 @@ CSS = \
 	../node_modules/@melitele/awesomplete/awesomplete.css \
 	${PROJECT}.css
 
-all: check compile
-
-check: lint
+all: compile
 
 compile: build/build.js build/build.css
 
@@ -18,19 +16,13 @@ build/build.css: $(CSS) | build
 	cat $^ > $@
 
 build/build.js: node_modules $(SRC) | build
-	$(NODE_BIN)/browserify \
-		--debug \
-		--transform envlocalify \
-		--require ./index.js:$(PROJECT) \
-		--outfile $@
+	node esbuild.js $@
 
 .DELETE_ON_ERROR: build/build.js
 
 node_modules: package.json
-	yarn && touch $@
-
-lint: | node_modules
-	../node_modules/.bin/jshint $(SRC)
+	yarn
+	touch $@
 
 clean:
 	rm -fr build
@@ -38,4 +30,4 @@ clean:
 distclean: clean
 	rm -fr node_modules
 
-.PHONY: clean lint check all compile
+.PHONY: clean check all compile
