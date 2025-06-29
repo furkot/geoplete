@@ -2,6 +2,8 @@
   "name": "geoplete",
   "version": "1.1.7",
   "description": "Autocompletion for places and addresses.",
+  "type": "module",
+  "exports": "./lib/geoplete.js",
   "author": {
     "name": "Damian Krzeminski",
     "email": "pirxpilot@furkot.com",
@@ -24,14 +26,13 @@
   },
   "devDependencies": {
     "@biomejs/biome": "2.0.5",
-    "jsdom": "~24",
+    "jsdom": "~26",
     "jsdom-global": "~3"
   },
   "scripts": {
     "test": "make check"
   },
   "files": [
-    "index.js",
     "lib"
   ]
 }

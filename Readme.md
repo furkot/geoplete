@@ -16,8 +16,9 @@ $ npm install --save geoplete
 ## Usage
 
 ```js
-var geoplete = require('geoplete');
-var input = document.querySelection('.input-field');
+import geoplete from 'geoplete';
+
+const input = document.querySelection('.input-field');
 
 geoplete(input, {         // input element to which geoplete attaches
   type: 'address',        // 'address' or 'place'

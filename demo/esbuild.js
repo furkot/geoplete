@@ -1,5 +1,5 @@
-const { build } = require('esbuild');
-const { default: envPlugin } = require('@intrnl/esbuild-plugin-env');
+import envPlugin from '@intrnl/esbuild-plugin-env';
+import { build } from 'esbuild';
 
 const outfile = process.argv[2] ?? 'build/build.js';
 
