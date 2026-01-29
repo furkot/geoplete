@@ -1,4 +1,12 @@
 
+2.0.1 / 2026-01-29
+==================
+
+ * upgrade `biome` to 2.3.13
+ * upgrade `jsdom` to ~27
+ * upgrade `debounce` to ~3
+ * upgrade @furkot/geocode to ~4
+
 2.0.0 / 2025-06-28
 ==================
 
