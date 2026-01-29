@@ -20,13 +20,13 @@
     "geocode"
   ],
   "dependencies": {
-    "@furkot/geocode": "^3.2.1",
+    "@furkot/geocode": "~4",
     "@melitele/awesomplete": "^2.0.2",
-    "debounce": "^1.1.0||^2.0.0"
+    "debounce": "~3"
   },
   "devDependencies": {
-    "@biomejs/biome": "2.0.5",
-    "jsdom": "~26",
+    "@biomejs/biome": "2.3.13",
+    "jsdom": "~27",
     "jsdom-global": "~3"
   },
   "scripts": {
